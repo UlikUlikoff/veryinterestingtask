@@ -514,6 +514,8 @@ function renderPagination(totalCount, currentPage, perPage) {
        const db = event.target.result;
    
        if (!db.objectStoreNames.contains('exchangeRates')) {
+        console.log('оздание объектного хранилища, если оно не существует');
+        console.log('keyPath: cc, exchangedate');
          // Создание объектного хранилища 'exchangeRates', если оно не существует
          //const objectStore = db.createObjectStore('exchangeRates', { keyPath: 'cc' });
          const objectStore = db.createObjectStore('exchangeRates', { keyPath: ['cc', 'exchangedate'] });
