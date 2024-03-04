@@ -141,7 +141,6 @@ function showHomePage() {
               fetchDataAndSaveToDB(stringAPI)
                 setTimeout(() => {
                   displayDataInTable(db, 'exchangeRates', 'data-table', formattedDate);
-                  console.log('Дата переданная для вывода на экран',formattedDate);
                 }, 1000);
 
             } else {
